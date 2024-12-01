@@ -6,16 +6,29 @@ import androidx.fragment.app.Fragment;
 
 import com.example.m08_amazon.R;
 
+import authapp.LoginFragment;
+import authapp.RegisterFragment;
+
 public class AuthActivity extends AppCompatActivity {
+
+    public static final String AUTH_MODE_LOGIN = "login";
+    public static final String AUTH_MODE_REGISTER = "register";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
 
-        // Cargar el fragmento de login por defecto
+        // Obtener el modo de autenticación desde el Intent
+        String authMode = getIntent().getStringExtra("auth_mode");
+
         if (savedInstanceState == null) {
-            loadFragment(new authapp.LoginFragment());
+            if (AUTH_MODE_REGISTER.equals(authMode)) {
+                loadFragment(new RegisterFragment());
+            } else {
+                // Por defecto, carga el fragmento de login
+                loadFragment(new LoginFragment());
+            }
         }
     }
 
@@ -25,3 +38,5 @@ public class AuthActivity extends AppCompatActivity {
                 .commit();
     }
 }
+
+

@@ -1,24 +1,35 @@
 package com.example.m08_amazon;
 
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
+
+    Button btnLogin, btnRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Inicializar botones
+        btnLogin = findViewById(R.id.btn_login_main);
+        btnRegister = findViewById(R.id.btn_register_main);
+
+        // Manejar clic en Iniciar Sesión
+        btnLogin.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, authapp.AuthActivity.class);
+            intent.putExtra("auth_mode", "login");
+            startActivity(intent);
+        });
+
+        // Manejar clic en Registrarse
+        btnRegister.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, authapp.AuthActivity.class);
+            intent.putExtra("auth_mode", "register");
+            startActivity(intent);
         });
     }
 }

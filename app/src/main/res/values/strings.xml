@@ -1,14 +1,10 @@
 <resources>
-
-    <!-- Nombre de la aplicación -->
-    <string name="app_name">M08 Amazon</string>
-
-    <!-- Descripción genérica de las imágenes (común para todos) -->
-    <string name="product_image">Imagen del producto seleccionado</string>
+    <!-- Imagen del Producto (Común para todos) -->
+    <string name="product_image">Imagen del Producto</string>
 
     <!-- Producto 1: Jamon de Bellota -->
-    <string name="product_title_jamon">Jamón de Bellota</string>
-    <string name="product_description_jamon">Jamón ibérico de bellota, curado durante 36 meses para un sabor inigualable. Perfecto para todo tipo de tapas y acompañamientos.</string>
+    <string name="product_title_jamon">Jamon de Bellota</string>
+    <string name="product_description_jamon">Jamon ibérico de bellota, curado durante 36 meses para un sabor inigualable. Perfecto para todo tipo de tapas y acompañamientos.</string>
     <string name="product_price_jamon">$149.99</string>
 
     <!-- Producto 2: PlayStation 5 -->
@@ -28,4 +24,6 @@
 
     <!-- Botón para Comprar (común para todos los productos) -->
     <string name="buy_button">Comprar</string>
+    <string name="app_name">M08 Amazon</string>
+
 </resources>
