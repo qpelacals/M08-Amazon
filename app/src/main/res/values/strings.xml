@@ -1,3 +1,28 @@
 <resources>
-    <string name="app_name">M08-Amazon</string>
+    <!-- Imagen del Producto (Común para todos) -->
+    <string name="product_image">Imagen del Producto</string>
+
+    <!-- Producto 1: Jamon de Bellota -->
+    <string name="product_title_jamon">Jamon de Bellota</string>
+    <string name="product_description_jamon">Jamon ibérico de bellota, curado durante 36 meses para un sabor inigualable. Perfecto para todo tipo de tapas y acompañamientos.</string>
+    <string name="product_price_jamon">$149.99</string>
+
+    <!-- Producto 2: PlayStation 5 -->
+    <string name="product_title_ps5">PlayStation 5</string>
+    <string name="product_description_ps5">La consola de nueva generación de Sony. Con gráficos impresionantes y una experiencia de juego única, la PS5 es la mejor opción para los gamers de hoy.</string>
+    <string name="product_price_ps5">$499.99</string>
+
+    <!-- Producto 3: Kit Taladro Percutor -->
+    <string name="product_title_taladro">Kit Taladro Percutor</string>
+    <string name="product_description_taladro">Taladro percutor profesional con varios accesorios, ideal para perforar en materiales duros como cemento y ladrillo. ¡Perfecto para proyectos de bricolaje!</string>
+    <string name="product_price_taladro">$79.99</string>
+
+    <!-- Producto 4: Cafetera Espresso -->
+    <string name="product_title_cafetera">Cafetera Espresso OSTER</string>
+    <string name="product_description_cafetera">Cafetera espresso automática de alta calidad, ideal para preparar café expreso y cappuccino en la comodidad de tu hogar. ¡Un sabor inconfundible!</string>
+    <string name="product_price_cafetera">$99.99</string>
+
+    <!-- Botón para Comprar (común para todos los productos) -->
+    <string name="buy_button">Comprar</string>
+
 </resources>
