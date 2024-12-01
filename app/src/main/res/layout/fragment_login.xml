@@ -1,0 +1,13 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/edit_email" android:hint="Email" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <EditText android:id="@+id/edit_password" android:hint="Contraseña" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" />
+
+    <Button android:id="@+id/btn_login" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Iniciar sesión" />
+    <TextView android:id="@+id/txt_register" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Registrar-se" />
+    <TextView android:id="@+id/txt_forgot_password" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Has olvidat la contrasenya?" />
+</LinearLayout>
