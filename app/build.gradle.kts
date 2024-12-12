@@ -16,7 +16,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
     defaultConfig {
-        applicationId = "authapp"
+        applicationId = "com.example.m08_amazon"
     }
 
     buildTypes {
