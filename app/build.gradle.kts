@@ -15,6 +15,9 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+    defaultConfig {
+        applicationId = "authapp"
+    }
 
     buildTypes {
         release {
