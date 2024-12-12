@@ -15,6 +15,21 @@ public class ProductActivity extends AppCompatActivity { // Extiende AppCompatAc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product); // Vincula el layout con esta actividad
 
+        // Obtener el nombre del usuario (puedes pasar esto dinámicamente desde el Intent)
+        String userName = getIntent().getStringExtra("USER_NAME");
+
+        // Crear e insertar el HeaderFragment
+        HeaderFragment headerFragment = HeaderFragment.newInstance(userName);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.header_container, headerFragment)
+                .commit();
+
+        // Añadir el FooterFragment
+        FooterFragment footerFragment = new FooterFragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.footer_container, footerFragment)
+                .commit();
+
         // Obtén los datos pasados por el Intent
         Intent intent = getIntent();
         int productImageResId = intent.getIntExtra("productImage", 0); // Imagen del producto
@@ -37,7 +52,17 @@ public class ProductActivity extends AppCompatActivity { // Extiende AppCompatAc
         // Configura el botón de compra
         Button buyButton = findViewById(R.id.btn_buy);
         buyButton.setOnClickListener(view -> {
-            Toast.makeText(this, "Producto comprado: " + productTitle, Toast.LENGTH_SHORT).show();
+            // Crear Intent para ir a Confirmation
+            Intent confirmationIntent = new Intent(ProductActivity.this, Confirmation.class);
+
+            // Pasar datos del producto al Confirmation
+            confirmationIntent.putExtra("productTitle", productTitle);
+            confirmationIntent.putExtra("productPrice", productPrice);
+            confirmationIntent.putExtra("USER_NAME", userName);
+
+            // Iniciar la actividad Confirmation
+            startActivity(confirmationIntent);
+            finish(); // Finaliza la actividad actual para evitar volver atrás
         });
     }
 }

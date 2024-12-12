@@ -6,6 +6,7 @@
     <!-- Descripción genérica de las imágenes (común para todos) -->
     <string name="product_image">Imagen del producto seleccionado</string>
 
+
     <!-- Producto 1: Jamon de Bellota -->
     <string name="product_title_jamon">Jamón de Bellota</string>
     <string name="product_description_jamon">Jamón ibérico de bellota, curado durante 36 meses para un sabor inigualable. Perfecto para todo tipo de tapas y acompañamientos.</string>
@@ -26,6 +27,14 @@
     <string name="product_description_cafetera">Cafetera espresso automática de alta calidad, ideal para preparar café expreso y cappuccino en la comodidad de tu hogar. ¡Un sabor inconfundible!</string>
     <string name="product_price_cafetera">$99.99</string>
 
+    <string name="home_button_description">Ir a la pantalla principal</string>
+    <string name="confirmation_message">¡Compra realizada con éxito!</string>
+    <string name="back_to_store">Volver a la tienda</string>
+    <string name="confirmation_icon_description">Icono de confirmación</string>
+
+
     <!-- Botón para Comprar (común para todos los productos) -->
     <string name="buy_button">Comprar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

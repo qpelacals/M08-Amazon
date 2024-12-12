@@ -1,194 +1,214 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
-    <!-- Barra de búsqueda en la parte superior -->
-    <EditText
-        android:id="@+id/search_bar"
+    <!-- Contenedor para el Header -->
+    <FrameLayout
+        android:id="@+id/header_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?android:attr/editTextBackground"
-        android:hint="Buscar productos"
-        android:inputType="text"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        android:layout_height="56dp" />
 
-    <!-- Sección de productos -->
+    <!-- Contenido principal -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical"
-        android:paddingTop="30dp">
+        android:padding="16dp">
 
-        <!-- Producto 1 -->
-        <LinearLayout
-            android:id="@+id/product1"
+        <!-- Barra de búsqueda -->
+        <EditText
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:gravity="center_vertical">
+            android:background="?android:attr/editTextBackground"
+            android:hint="Buscar productos"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:padding="10dp" />
 
-            <!-- Imagen del Producto 1 -->
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/jamon"
-                android:contentDescription="Jamon de Bellota" />
-
-            <!-- Información del Producto 1 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
-
-                <TextView
-                    android:id="@+id/product1_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jamon de Bellota"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:id="@+id/product1_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción del Producto 1"
-                    android:textSize="14sp" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <!-- Producto 2 -->
+        <!-- Sección de productos -->
         <LinearLayout
-            android:id="@+id/product2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:gravity="center_vertical">
+            android:orientation="vertical"
+            android:paddingTop="30dp">
 
-            <!-- Imagen del Producto 2 -->
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/play5"
-                android:contentDescription="Producto 2" />
-
-            <!-- Información del Producto 2 -->
+            <!-- Producto 1 -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/product1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
 
-                <TextView
-                    android:id="@+id/product2_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PlayStation 5"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
+                <!-- Imagen del Producto 1 -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/jamon"
+                    android:contentDescription="Jamón de Bellota" />
 
-                <TextView
-                    android:id="@+id/product2_description"
-                    android:layout_width="wrap_content"
+                <!-- Información del Producto 1 -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del Producto 2"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/product1_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jamón de Bellota"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product1_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_price_jamon"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Producto 3 -->
-        <LinearLayout
-            android:id="@+id/product3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:gravity="center_vertical">
-
-            <!-- Imagen del Producto 3 -->
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/taladro"
-                android:contentDescription="Producto 3" />
-
-            <!-- Información del Producto 3 -->
+            <!-- Producto 2 -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/product2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
 
-                <TextView
-                    android:id="@+id/product3_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Taladro Percutor Kit"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
+                <!-- Imagen del Producto 2 -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/play5"
+                    android:contentDescription="PlayStation 5" />
 
-                <TextView
-                    android:id="@+id/product3_description"
-                    android:layout_width="wrap_content"
+                <!-- Información del Producto 2 -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del Producto 3"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/product2_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PlayStation 5"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product2_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_price_ps5"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
-        <!-- Producto 4 -->
-        <LinearLayout
-            android:id="@+id/product4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:background="?android:attr/selectableItemBackground"
-            android:gravity="center_vertical">
-
-            <!-- Imagen del Producto 4 -->
-            <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:src="@drawable/cafetera"
-                android:contentDescription="Producto 4" />
-
-            <!-- Información del Producto 4 -->
+            <!-- Producto 3 -->
             <LinearLayout
-                android:layout_width="0dp"
+                android:id="@+id/product3"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:paddingStart="16dp">
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
 
-                <TextView
-                    android:id="@+id/product4_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Cafetera OSTER BVSTEM7400"
-                    android:textStyle="bold"
-                    android:textSize="16sp" />
+                <!-- Imagen del Producto 3 -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/taladro"
+                    android:contentDescription="Taladro Percutor Kit" />
 
-                <TextView
-                    android:id="@+id/product4_description"
-                    android:layout_width="wrap_content"
+                <!-- Información del Producto 3 -->
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Descripción del Producto 4"
-                    android:textSize="14sp" />
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/product3_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Taladro Percutor Kit"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product3_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_price_taladro"
+                        android:textSize="14sp" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
 
+            <!-- Producto 4 -->
+            <LinearLayout
+                android:id="@+id/product4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical">
+
+                <!-- Imagen del Producto 4 -->
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/cafetera"
+                    android:contentDescription="Cafetera OSTER BVSTEM7400" />
+
+                <!-- Información del Producto 4 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/product4_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cafetera OSTER BVSTEM7400"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/product4_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/product_price_cafetera"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
     </LinearLayout>
+
+    <!-- Contenedor para el Footer -->
+    <FrameLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
 </LinearLayout>

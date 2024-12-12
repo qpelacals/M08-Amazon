@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Contenedor para el Header -->
+    <FrameLayout
+        android:id="@+id/header_container"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+
+    <!-- Contenido principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <!-- Icono de Confirmación -->
+        <ImageView
+            android:id="@+id/confirmation_icon"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_confirmation"
+            android:tint="@color/dark_blue"
+            android:contentDescription="@string/confirmation_icon_description" />
+
+        <!-- Mensaje de Confirmación -->
+        <TextView
+            android:id="@+id/confirmation_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/confirmation_message"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <!-- Detalles del Producto -->
+        <TextView
+            android:id="@+id/product_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:textSize="14sp" />
+
+        <!-- Botón para Regresar a la Tienda -->
+        <Button
+            android:id="@+id/back_to_store_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="#FFFFFF"
+            android:text="@string/back_to_store"
+            android:padding="12dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Contenedor para el Footer -->
+    <FrameLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="56dp" />
+</LinearLayout>
